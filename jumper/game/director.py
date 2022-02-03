@@ -1,6 +1,6 @@
-#from game.jumper import Jumper
-#from game.word import Word
-#from game.terminal import Terminal
+from game.jumper import Jumper
+from game.word import Word
+from game.terminal import Terminal
 
 class Director:
     """The player who is playing the game.
@@ -23,11 +23,11 @@ class Director:
 
         self._lives = 5
         
-        #self._jumper = Jumper()
+        self._jumper = Jumper()
 
-        #self._word = Word()
+        self._word = Word()
 
-        #self._terminal = Terminal()
+        self._terminal = Terminal()
         
     def start_game(self):
         """Starts the game by running the main game loop.
@@ -36,4 +36,12 @@ class Director:
             self (Director): an instance of Director.
         """
         while self._is_playing:
-            pass
+            # print parachute for the first time         
+            current_state = self._jumper.draw_parachute()
+
+            # use terminal to print the parachute
+            self._terminal.output(current_state)
+
+            # collect user input
+
+            break
