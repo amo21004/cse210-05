@@ -19,9 +19,12 @@ class Word:
             self (Word): An instance of Word.
         
         """
-        self._words = ['strife', 'reflex', 'pulled', 'scale', 'malet', 'cucumber', 'zoned',
+        self._words = [
+        'strife', 'reflex', 'pulled', 'scale', 'malet', 'cucumber', 'zoned',
         'index', 'level', 'blurt', 'climb', 'crumble', 'fashion', 'onion', 'plain', 'computer',
-        'flower', 'water', 'children', 'rainbow']
+        'flower', 'water', 'children', 'rainbow'
+        ]
+
         self._selected_word = random.choice(self._words)
 
     def word_choice(self):
@@ -36,6 +39,9 @@ class Word:
         """
         return self._selected_word
 
+    def get_letters(self):
+        return list(self._selected_word)
+
     def secret_word(self, word):
         """
         Reprints the word as "_" so the user can't see the word
@@ -45,6 +51,7 @@ class Word:
             word(string): The randomly picked word 
         """
         word = len(self._selected_word)
+
         for _ in word:
             print('_')
 
@@ -62,9 +69,9 @@ class Word:
 
         for i in letters:
             if letter == i:
+                # Found. Terminate loop by returning true
                 return True
-            else:
-                return False
 
-
+        # Above loop did not find a match so the letter doesn't exist. So returning false
+        return False
         

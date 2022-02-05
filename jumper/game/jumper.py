@@ -7,33 +7,21 @@ class Jumper:
     def __init__(self):
         self._draw = []
 
+        first_try  = " _____ "
 
-    def draw_jumper(self, list):
-        """
-        Creates all the pieces for the parachute and jumper and appends
-        them into the self.draw list.
+        second_try = "/_____\ "
 
-        Args:
-            self (Jumper): An instance of jumper.
-            list: Creates the list to hold the jumper
+        third_try  = "\     / "
 
-        Returns:
-            list: the new created list
-        """
+        fourth_try = " \   / "
 
-        first_try  = " ___ "
+        fifth_try = "  \ / "
 
-        second_try = "/___\ "
+        head = "   O "
 
-        third_try  = "\   / "
+        chest = "  /|\ "
 
-        fourth_try = " \ / "
-
-        head = "  O "
-
-        chest = " /|\ "
-
-        legs = " / \ "
+        legs = "  / \ "
 
         self._draw.append(first_try)
 
@@ -43,13 +31,13 @@ class Jumper:
 
         self._draw.append(fourth_try)
 
+        self._draw.append(fifth_try)
+
         self._draw.append(head)
 
         self._draw.append(chest)
 
         self._draw.append(legs)
-
-        return self._draw
 
     def draw_parachute(self):
         # iterate over the list to draw the parachute
@@ -58,9 +46,8 @@ class Jumper:
         #     self(Jumper): An instance of Jumper.
         #     _draw (list): a list of strings that will be used to draw the parachute
         parachute = ''
-        drawn_jumper = self.draw_jumper(self._draw)
 
-        for i in drawn_jumper:
+        for i in self._draw:
             parachute = parachute + i + '\n'
 
         return parachute
