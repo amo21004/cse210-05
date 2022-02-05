@@ -14,6 +14,14 @@ Jumper is played according to the following rules.
 * If the player has no more parachute the game is over.
 
 ## Project Structure
+The project files and folders are organized as follows:
+```
+root                    (project root folder)
++-- jumper              (source code for game)
+  +-- game              (specific classes)
+  +-- __main__.py       (program entry point)
++-- README.md           (general info)
+```
 
 ## Required Software
 * Python 3.8.0
@@ -22,7 +30,6 @@ Jumper is played according to the following rules.
 Team 9 of CSE210
 
 ```
-Shauntal Byrne: byr21002@byui.edu
-Naif Amoodi: amo21004@byui.edu
-Tatiana Quiroga Meza: qui21015@byui.edu
-Eduardo Sánchez: san21086@byui.edu
+* Shauntal Byrne: byr21002@byui.edu
+* Naif Amoodi: amo21004@byui.edu
+* Eduardo Sánchez: san21086@byui.edu
