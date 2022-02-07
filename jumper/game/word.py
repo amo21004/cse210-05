@@ -13,7 +13,7 @@ class Word:
 
     def __init__(self):
         """
-        Create a list of words and pick on of them at random.
+        Create a list of words and pick one of them at random.
 
         Args:
             self (Word): An instance of Word.
@@ -60,6 +60,8 @@ class Word:
         Checks to see if a letter exists in the selected word
 
         Args:
+            self(Word)" An instance of Word.
+            letter(boolean): randomly selected word that is then disected into individual letters
 
         Returns:
             True if letter is in the word,
