@@ -29,10 +29,10 @@ class Terminal:
 
     def output(self, text):
         """
-        Outputs the needed Terminal code to print the jumper.
+        Outputs the needed Terminal code.
 
         Args:
             self (Terminal): An instance of Terminal.
-            text (variable): A variable that called the jumper draw_parachute()
+            text (variable): A variable that is used for any output needed in the game.
         """
         print(text + '\n')
